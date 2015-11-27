@@ -31,6 +31,7 @@ class SummarTree(object):
         for node in self._tree[::-1]:
             if summary_name in node.summaries:
                 last_summary = node.summaries[summary_name]
+                break
             else:
                 events.append(node.event)
         return (head_node, last_summary, events)
